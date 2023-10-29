@@ -1,0 +1,54 @@
+﻿Tabela Herois:
+
+
+CREATE TABLE [dbo].[herois](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Nome] [varchar](120) NOT NULL,
+	[NomeHeroi] [varchar](120) NOT NULL,
+	[DataNascimento] [datetime] NULL,
+	[Altura] [int] NOT NULL,
+	[Peso] [int] NOT NULL
+) ON [PRIMARY]
+GO
+
+------------------
+------------------
+------------------
+------------------
+
+  Tabela Superpoderes:
+
+
+CREATE TABLE [dbo].[superpoderes](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Superpoder] [varchar](50) NOT NULL,
+	[Descricacao] [varchar](250) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+------------------
+------------------
+------------------
+
+  Tabela HeroisSuperpoder:
+
+
+
+CREATE TABLE [dbo].[heroissuperpoder](
+	[HeroiId] [int] NOT NULL,
+	[SuperpoderId] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[HeroiId] ASC,
+	[SuperpoderId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[heroissuperpoder]  WITH CHECK ADD FOREIGN KEY([SuperpoderId])
+REFERENCES [dbo].[superpoderes] ([Id])
+GO
