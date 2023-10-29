@@ -7,10 +7,10 @@ FrontEnd: Angular,
 BackEnd: .NET/C#, 
 Banco de dados: SQLServer
 
-Fiz o projeto com Front e Back separados de forma que qualquer tecnologia possa consumir as APIS.(React,Angular,ASP.NET...)
+Fiz o projeto com Front e Back separados de forma que qualquer tecnologia possa consumir as APIS.(React,Angular,ASP.NET...).
 
 ## NO PROJETO:
-Front: Criei o projeto em Angular, de forma a o clicar em "Novo Heroi" abre-se um box para o preencimento das informações do SuperHeroi.
+Front: Criei o projeto em Angular, de forma a o clicar em "Novo Heroi" abre-se um box para o preencimento das informações do SuperHeroi. (Atualize a página para a visualização do novo Heroi adicionado)
 
 BackEnd: Crei 3 APIS, todas elas com POST,PUT,GET,DELETE. (API-SuperHerois, API-SuperPoderes, API-HeroisSuperPoderes)
 
